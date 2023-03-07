@@ -3,11 +3,9 @@
 </template>
 
 <script setup>
-const story = await useAsyncStoryblok("home", {
+const story = await useAsyncStoryblok("projects", {
   version: "draft",
-  resolve_relations: ["featured-projects.projects"],
 });
-
 useHead({
   title: story.value.name,
 });

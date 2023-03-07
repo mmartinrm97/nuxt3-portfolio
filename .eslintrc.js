@@ -20,5 +20,6 @@ module.exports = {
   rules: {
     "vue/script-setup-no-users-vars": "off",
     "vue/multi-word-component-names": "off",
+    "vue/no-template-shadow": "off",
   },
 };

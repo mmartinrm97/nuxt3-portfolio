@@ -1,8 +1,12 @@
 <template>
-  <Title>This is the about page</Title>
-  <div>About page</div>
+  <StoryblokComponent v-if="story" :blok="story.content" />
 </template>
 
-<script setup></script>
-
-<style lang="scss" scoped></style>
+<script setup>
+const story = await useAsyncStoryblok("about", {
+  version: "draft",
+});
+useHead({
+  title: story.value.name,
+});
+</script>

@@ -1,17 +1,12 @@
 <template>
-  <div class="container mx-auto">
-    <Title>Main Title</Title>
-    <nav>
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/about">About</NuxtLink>
-      <NuxtLink to="/blog">Blog</NuxtLink>
-      <NuxtLink to="/blog/my-article">First Article</NuxtLink>
-      <NuxtLink to="/todos">Todos</NuxtLink>
-    </nav>
-    <slot />
+  <div class="w-full">
+    <AppNavBar />
+
+    <div
+      class="slg:px-24 mx-auto mt-24 w-full max-w-screen-lg px-8 pb-24 sm:mt-28 sm:px-16 lg:mt-48"
+    >
+      <slot />
+    </div>
+    <AppFooter />
   </div>
 </template>
-
-<script setup></script>
-
-<style scoped></style>
